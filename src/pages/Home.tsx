@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { products } from '../data/products';
 import ProductCard from '../components/ProductCard';
-import heroImage from '../assets/hero.png';
+import heroImage from '../assets/images/hero.jfif';
 import furn5 from '../assets/images/furniture/furn5.jpeg';
 import furn6 from '../assets/images/furniture/furn6.jpeg';
 import furn7 from '../assets/images/furniture/furn7.jpeg';
@@ -16,10 +16,11 @@ export default function Home() {
       {/* Hero Section with Background Image */}
       <section className="relative h-[500px] sm:h-[600px] bg-gray-900">
         {/* Background Image */}
-        <div 
-          className="absolute inset-0 w-full h-full bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        ></div>
+        <img 
+          src={heroImage}
+          alt="Hero background"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/65"></div>
         
