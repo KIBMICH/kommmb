@@ -16,11 +16,10 @@ export default function Home() {
       {/* Hero Section with Background Image */}
       <section className="relative h-[500px] sm:h-[600px] bg-gray-900">
         {/* Background Image */}
-        <img 
-          src={heroImage}
-          alt="Hero background"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        <div 
+          className="absolute inset-0 w-full h-full bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        ></div>
         {/* Dark Overlay */}
         <div className="absolute inset-0 bg-black/65"></div>
         
