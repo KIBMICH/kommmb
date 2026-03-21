@@ -1,5 +1,23 @@
 import type { Product } from '../types';
 
+// Import furniture images
+import furn1 from '../assets/images/furniture/furn1.jpeg';
+import furn2 from '../assets/images/furniture/furn2.jpeg';
+import furn3 from '../assets/images/furniture/furn3.jpeg';
+import furn5 from '../assets/images/furniture/furn5.jpeg';
+import furn6 from '../assets/images/furniture/furn6.jpeg';
+import furn7 from '../assets/images/furniture/furn7.jpeg';
+
+// Import toy images
+import toy1 from '../assets/images/toy/toy1.jpeg';
+import toy2 from '../assets/images/toy/toy2.jpeg';
+import toy3 from '../assets/images/toy/toy3.jpeg';
+import toy4 from '../assets/images/toy/toy4.jpeg';
+import toy5 from '../assets/images/toy/toy5.jpeg';
+import toy6 from '../assets/images/toy/toy6.jpeg';
+import toy7 from '../assets/images/toy/toy7.jpeg';
+import toy8 from '../assets/images/toy/toy8.jpeg';
+
 export const products: Product[] = [
   {
     id: '1',
@@ -12,7 +30,7 @@ export const products: Product[] = [
     materials: ['Recycled cotton', 'Organic cotton', 'Recycled polyester fill'],
     dimensions: '18" x 18"',
     impactKG: 0.8,
-    images: ['/src/assets/images/furniture/furn1.jpeg'],
+    images: [furn1],
     tags: ['recycled', 'handmade', 'organic'],
     description: 'Beautiful throw pillow made from 80% recycled cotton and organic materials. Perfect for adding comfort and style to any living space.',
     careInstructions: 'Machine wash cold, tumble dry low',
@@ -30,7 +48,7 @@ export const products: Product[] = [
     materials: ['Organic cotton cover', 'Recycled memory foam', 'Bamboo fiber'],
     dimensions: '20" x 26"',
     impactKG: 1.2,
-    images: ['/src/assets/images/furniture/furn2.jpeg'],
+    images: [furn2],
     tags: ['recycled', 'hypoallergenic'],
     description: 'Premium sleeping pillow with recycled memory foam core and organic cotton cover for ultimate comfort.',
     careInstructions: 'Spot clean only, removable cover machine washable',
@@ -47,7 +65,7 @@ export const products: Product[] = [
     materials: ['Recycled denim cover', 'Recycled foam', 'Natural rubber base'],
     dimensions: '16" x 12" x 6"',
     impactKG: 1.5,
-    images: ['/src/assets/images/furniture/furn3.jpeg'],
+    images: [furn3],
     tags: ['recycled', 'ergonomic'],
     description: 'Comfortable foot rest designed to improve posture and reduce leg fatigue, made entirely from recycled materials.',
     careInstructions: 'Spot clean with damp cloth',
@@ -64,7 +82,7 @@ export const products: Product[] = [
     materials: ['Recycled velvet', 'Organic cotton backing', 'Recycled fill'],
     dimensions: '20" x 20"',
     impactKG: 0.9,
-    images: ['/src/assets/images/furniture/furn5.jpeg'],
+    images: [furn5],
     tags: ['recycled', 'luxury', 'handmade'],
     description: 'Luxurious velvet throw pillow crafted from recycled materials. Adds elegance and comfort to any space.',
     careInstructions: 'Dry clean only',
@@ -82,7 +100,7 @@ export const products: Product[] = [
     materials: ['100% Organic cotton', 'Natural latex fill', 'Bamboo fiber'],
     dimensions: '20" x 26" (Set of 2)',
     impactKG: 2.0,
-    images: ['/src/assets/images/furniture/furn6.jpeg'],
+    images: [furn6],
     tags: ['organic', 'hypoallergenic', 'premium'],
     description: 'Premium pillow set with natural latex filling and organic cotton covers. Perfect for a restful sleep.',
     careInstructions: 'Spot clean, removable covers machine washable',
@@ -99,7 +117,7 @@ export const products: Product[] = [
     materials: ['Recycled fabric', 'Memory foam', 'Wooden base'],
     dimensions: '18" x 14" x 7"',
     impactKG: 1.8,
-    images: ['/src/assets/images/furniture/furn7.jpeg'],
+    images: [furn7],
     tags: ['recycled', 'ergonomic', 'modern'],
     description: 'Modern designer foot rest with memory foam comfort and sustainable materials.',
     careInstructions: 'Wipe clean with damp cloth',
@@ -117,7 +135,7 @@ export const products: Product[] = [
     dimensions: '12" x 6"',
     ageRange: '0-3 years',
     impactKG: 0.3,
-    images: ['/src/assets/images/toy/toy1.jpeg'],
+    images: [toy1],
     tags: ['recycled', 'handmade', 'safe'],
     description: 'Adorable soft fish toy perfect for imaginative play. Made with child-safe materials and recycled textiles.',
     careInstructions: 'Machine wash gentle, air dry',
@@ -135,7 +153,7 @@ export const products: Product[] = [
     dimensions: '10" x 8"',
     ageRange: '0-5 years',
     impactKG: 0.4,
-    images: ['/src/assets/images/toy/toy2.jpeg'],
+    images: [toy2],
     tags: ['organic', 'handmade', 'safe'],
     description: 'Charming bird plush toy handcrafted from organic and recycled materials. Perfect companion for little ones.',
     careInstructions: 'Hand wash recommended, air dry',
@@ -153,7 +171,7 @@ export const products: Product[] = [
     dimensions: '10" x 8" x 3"',
     ageRange: '3-6 years',
     impactKG: 0.6,
-    images: ['/src/assets/images/toy/toy3.jpeg'],
+    images: [toy3],
     tags: ['educational', 'recycled', 'montessori'],
     description: 'Complete learning kit with counting beads, sorting shapes, and activity cards. Supports early math development.',
     careInstructions: 'Wipe clean with damp cloth',
@@ -171,7 +189,7 @@ export const products: Product[] = [
     dimensions: 'Various sizes',
     ageRange: '1-5 years',
     impactKG: 0.5,
-    images: ['/src/assets/images/toy/toy4.jpeg'],
+    images: [toy4],
     tags: ['recycled', 'handmade', 'safe'],
     description: 'Delightful set of three animal plush toys. Each one is handcrafted with care using sustainable materials.',
     careInstructions: 'Machine wash gentle, air dry',
@@ -189,7 +207,7 @@ export const products: Product[] = [
     dimensions: '14" x 8"',
     ageRange: '0-4 years',
     impactKG: 0.4,
-    images: ['/src/assets/images/toy/toy5.jpeg'],
+    images: [toy5],
     tags: ['organic', 'soft', 'safe'],
     description: 'Ultra-soft bunny plush perfect for cuddling. Made with the softest organic materials.',
     careInstructions: 'Hand wash, air dry',
@@ -207,7 +225,7 @@ export const products: Product[] = [
     dimensions: '11" x 9"',
     ageRange: '1-5 years',
     impactKG: 0.4,
-    images: ['/src/assets/images/toy/toy6.jpeg'],
+    images: [toy6],
     tags: ['recycled', 'colorful', 'safe'],
     description: 'Vibrant rainbow elephant toy that sparks imagination and joy. Made from recycled materials.',
     careInstructions: 'Machine wash gentle, air dry',
@@ -225,7 +243,7 @@ export const products: Product[] = [
     dimensions: '12" x 10" x 4"',
     ageRange: '2-6 years',
     impactKG: 0.7,
-    images: ['/src/assets/images/toy/toy7.jpeg'],
+    images: [toy7],
     tags: ['educational', 'recycled', 'learning'],
     description: 'Colorful alphabet blocks for early learning. Helps children learn letters, spelling, and word formation.',
     careInstructions: 'Wipe clean with damp cloth',
@@ -243,7 +261,7 @@ export const products: Product[] = [
     dimensions: '13" x 10"',
     ageRange: '2-6 years',
     impactKG: 0.4,
-    images: ['/src/assets/images/toy/toy8.jpeg'],
+    images: [toy8],
     tags: ['recycled', 'fun', 'safe'],
     description: 'Adorable friendly monster plush that makes a perfect playmate. Soft, safe, and sustainable.',
     careInstructions: 'Machine wash gentle, air dry',

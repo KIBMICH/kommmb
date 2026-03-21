@@ -1,6 +1,12 @@
 import { Link } from 'react-router-dom';
 import { products } from '../data/products';
 import ProductCard from '../components/ProductCard';
+import heroImage from '../assets/hero.png';
+import furn5 from '../assets/images/furniture/furn5.jpeg';
+import furn6 from '../assets/images/furniture/furn6.jpeg';
+import furn7 from '../assets/images/furniture/furn7.jpeg';
+import toy4 from '../assets/images/toy/toy4.jpeg';
+import toy5 from '../assets/images/toy/toy5.jpeg';
 
 export default function Home() {
   const featuredProducts = products.slice(0, 4);
@@ -11,7 +17,7 @@ export default function Home() {
       <section className="relative h-[500px] sm:h-[600px] bg-gray-900">
         {/* Background Image */}
         <img 
-          src="/src/assets/images/hero.jfif" 
+          src={heroImage}
           alt="Hero background"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -69,7 +75,7 @@ export default function Home() {
               className="group relative h-80 rounded-2xl overflow-hidden"
             >
               <img 
-                src="/src/assets/images/furniture/furn5.jpeg"
+                src={furn5}
                 alt="Soft Furniture"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
@@ -94,7 +100,7 @@ export default function Home() {
               className="group relative h-80 rounded-2xl overflow-hidden"
             >
               <img 
-                src="/src/assets/images/toy/toy4.jpeg"
+                src={toy4}
                 alt="Toys & Educational"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
@@ -122,7 +128,7 @@ export default function Home() {
               className="group relative h-48 rounded-xl overflow-hidden"
             >
               <img 
-                src="/src/assets/images/furniture/furn6.jpeg"
+                src={furn6}
                 alt="Throw Pillows"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
@@ -139,7 +145,7 @@ export default function Home() {
               className="group relative h-48 rounded-xl overflow-hidden"
             >
               <img 
-                src="/src/assets/images/toy/toy5.jpeg"
+                src={toy5}
                 alt="Play Toys"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
@@ -156,7 +162,7 @@ export default function Home() {
               className="group relative h-48 rounded-xl overflow-hidden"
             >
               <img 
-                src="/src/assets/images/furniture/furn7.jpeg"
+                src={furn7}
                 alt="Foot Rests"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
