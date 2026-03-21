@@ -1,11 +1,9 @@
 import { useState, useMemo } from 'react';
 import { products } from '../data/products';
-import { categoryGroups } from '../data/categories';
 import ProductCard from '../components/ProductCard';
 
 export default function Products() {
   const [selectedGroup, setSelectedGroup] = useState<string>('all');
-  const [selectedSubcategory, setSelectedSubcategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [sortBy, setSortBy] = useState('newest');
 
