@@ -2,14 +2,21 @@ import { Link } from 'react-router-dom';
 import { products } from '../data/products';
 import ProductCard from '../components/ProductCard';
 import heroImage from '../assets/images/hero.jfif';
-import furn5 from '../assets/images/furniture/furn5.jpeg';
-import furn6 from '../assets/images/furniture/furn6.jpeg';
-import furn7 from '../assets/images/furniture/furn7.jpeg';
+import pillow1 from '../assets/images/pillow/furn5.jpeg';
+import pillow2 from '../assets/images/pillow/furn6.jpeg';
+import pillow3 from '../assets/images/pillow/furn7.jpeg';
 import toy4 from '../assets/images/toy/toy4.jpeg';
 import toy5 from '../assets/images/toy/toy5.jpeg';
+import rug1 from '../assets/images/rugs/rug1.jpeg';
 
 export default function Home() {
-  const featuredProducts = products.slice(0, 4);
+  // Select diverse featured products from different categories
+  const featuredProducts = [
+    products.find(p => p.group === 'pillow' && p.subcategory === 'throw-pillows'),
+    products.find(p => p.group === 'toys-educational' && p.subcategory === 'play-toys'),
+    products.find(p => p.group === 'rugs'),
+    products.find(p => p.group === 'footrest'),
+  ].filter(Boolean); // Remove any undefined values
 
   return (
     <div className="min-h-screen bg-white">
@@ -69,22 +76,22 @@ export default function Home() {
           </div>
 
           {/* Large Collection Cards */}
-          <div className="grid md:grid-cols-2 gap-6 mb-6">
+          <div className="grid md:grid-cols-3 gap-6 mb-6">
             <Link 
-              to="/category/soft-furniture"
+              to="/category/pillow"
               className="group relative h-80 rounded-2xl overflow-hidden"
             >
               <img 
-                src={furn5}
-                alt="Soft Furniture"
+                src={pillow1}
+                alt="Pillow Collection"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-8">
                 <h3 className="text-3xl font-heading font-bold text-white mb-2">
-                  Soft Furniture
+                  Pillow Collection
                 </h3>
                 <p className="text-white/90 mb-4">
-                  Comfortable pillows and foot rests made from recycled materials
+                  Comfortable pillows made from recycled and organic materials
                 </p>
                 <span className="text-white font-semibold inline-flex items-center">
                   Explore Collection
@@ -119,16 +126,41 @@ export default function Home() {
                 </span>
               </div>
             </Link>
+
+            <Link 
+              to="/category/rugs"
+              className="group relative h-80 rounded-2xl overflow-hidden"
+            >
+              <img 
+                src={rug1}
+                alt="Rugs Collection"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-8">
+                <h3 className="text-3xl font-heading font-bold text-white mb-2">
+                  Rugs Collection
+                </h3>
+                <p className="text-white/90 mb-4">
+                  Handcrafted rugs made from recycled and sustainable materials
+                </p>
+                <span className="text-white font-semibold inline-flex items-center">
+                  Explore Collection
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+              </div>
+            </Link>
           </div>
 
           {/* Small Category Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             <Link 
-              to="/category/soft-furniture/throw-pillows"
+              to="/category/pillow/throw-pillows"
               className="group relative h-48 rounded-xl overflow-hidden"
             >
               <img 
-                src={furn6}
+                src={pillow2}
                 alt="Throw Pillows"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
@@ -158,17 +190,17 @@ export default function Home() {
             </Link>
 
             <Link 
-              to="/category/soft-furniture/foot-rests"
+              to="/category/footrest"
               className="group relative h-48 rounded-xl overflow-hidden"
             >
               <img 
-                src={furn7}
-                alt="Foot Rests"
+                src={pillow3}
+                alt="Footrest"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                 <div className="text-center text-white">
-                  <h4 className="text-xl font-semibold mb-1">Foot Rests</h4>
+                  <h4 className="text-xl font-semibold mb-1">Footrest</h4>
                   <p className="text-sm text-white/90">Ergonomic support</p>
                 </div>
               </div>

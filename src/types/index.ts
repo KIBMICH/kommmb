@@ -3,7 +3,7 @@ export interface Product {
   sku: string;
   title: string;
   price: number;
-  group: 'soft-furniture' | 'toys-educational';
+  group: 'pillow' | 'toys-educational' | 'rugs' | 'oven-gloves' | 'footrest' | 'bedboard';
   subcategory: string;
   shortDescriptor: string;
   materials: string[];

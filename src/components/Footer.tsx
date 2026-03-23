@@ -23,8 +23,12 @@ export default function Footer() {
           <div className="text-center sm:text-left">
             <h3 className="font-semibold text-gray-900 mb-4">Shop</h3>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/category/soft-furniture" className="text-gray-600 hover:text-leaf-green">Soft Furniture</Link></li>
+              <li><Link to="/category/pillow" className="text-gray-600 hover:text-leaf-green">Pillow</Link></li>
               <li><Link to="/category/toys-educational" className="text-gray-600 hover:text-leaf-green">Toys & Educational</Link></li>
+              <li><Link to="/category/rugs" className="text-gray-600 hover:text-leaf-green">Rugs</Link></li>
+              <li><Link to="/category/oven-gloves" className="text-gray-600 hover:text-leaf-green">Oven Gloves</Link></li>
+              <li><Link to="/category/footrest" className="text-gray-600 hover:text-leaf-green">Footrest</Link></li>
+              <li><Link to="/category/bedboard" className="text-gray-600 hover:text-leaf-green">Bedboard</Link></li>
               <li><Link to="/products" className="text-gray-600 hover:text-leaf-green">All Products</Link></li>
             </ul>
           </div>

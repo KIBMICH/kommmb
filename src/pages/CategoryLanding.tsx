@@ -3,6 +3,34 @@ import { categoryGroups } from '../data/categories';
 import { products } from '../data/products';
 import ProductCard from '../components/ProductCard';
 
+// Import subcategory images
+import throwPillowImg from '../assets/images/pillow/throwpillows/throw1.jpeg';
+import bedroomPillowImg from '../assets/images/pillow/bedroompillow/bed1.jpeg';
+import neckPillowImg from '../assets/images/pillow/neckpillow/neck1.jpeg';
+import nursingPillowImg from '../assets/images/pillow/nursingpillow/nurse1.jpeg';
+import customizedPillowImg from '../assets/images/pillow/customizedpillow/cus1.jpeg';
+import playToysImg from '../assets/images/toy/toy1.jpeg';
+import educationalImg from '../assets/images/toy/toy3.jpeg';
+import rugImg from '../assets/images/rugs/rug1.jpeg';
+import ovenGlovesImg from '../assets/images/ovengloves/glove1.jpeg';
+import footrestImg from '../assets/images/footrest/foot1.jpeg';
+import bedboardImg from '../assets/images/bedboard/bedboard1.PNG';
+
+// Subcategory image mapping
+const subcategoryImages: Record<string, string> = {
+  'throw-pillows': throwPillowImg,
+  'bedroom-pillows': bedroomPillowImg,
+  'neck-pillows': neckPillowImg,
+  'nursing-pillows': nursingPillowImg,
+  'customized-pillows': customizedPillowImg,
+  'play-toys': playToysImg,
+  'educational-materials': educationalImg,
+  'floor-rugs': rugImg,
+  'kitchen-gloves': ovenGlovesImg,
+  'ergonomic-footrest': footrestImg,
+  'headboards': bedboardImg,
+};
+
 export default function CategoryLanding() {
   const { groupSlug, subcategorySlug } = useParams();
   
@@ -31,7 +59,7 @@ export default function CategoryLanding() {
     return p.group === groupSlug;
   });
 
-  const isSoftFurniture = groupSlug === 'soft-furniture';
+  const isPillow = groupSlug === 'pillow';
 
   return (
     <div className="min-h-screen bg-white">
@@ -39,7 +67,7 @@ export default function CategoryLanding() {
       <section className="relative h-[500px] bg-gray-900">
         <div className="absolute inset-0">
           <img 
-            src={isSoftFurniture 
+            src={isPillow 
               ? "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1600&h=900&fit=crop"
               : "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=1600&h=900&fit=crop"
             }
@@ -54,11 +82,11 @@ export default function CategoryLanding() {
               {subcategory ? subcategory.name : group.name}
             </div>
             <h1 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6">
-              {isSoftFurniture ? 'The Art of Sustainable Comfort' : 'Learning Through Play'}
+              {isPillow ? 'The Art of Sustainable Comfort' : 'Learning Through Play'}
             </h1>
             <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-              {isSoftFurniture 
-                ? 'Handcrafted furniture pieces made from 100% recycled and organic materials. Every item tells a story of environmental responsibility and timeless design.'
+              {isPillow 
+                ? 'Handcrafted pillow pieces made from 100% recycled and organic materials. Every item tells a story of environmental responsibility and timeless design.'
                 : 'Safe, sustainable toys and educational materials designed to inspire creativity and learning while protecting our planet.'
               }
             </p>
@@ -92,10 +120,10 @@ export default function CategoryLanding() {
             Innovation in Every Thread
           </h2>
           <p className="text-gray-600 mb-4">
-            At Kommmb Innovations, each item in our {group.name.toLowerCase()} collection is crafted using only the best of the best materials. Our Soft Furniture line is made of 100% recycled or organic fabrics—no waste, no shortcuts, just eco-friendly comfort. Every piece is handmade with care, ensuring quality and sustainability in every stitch.
+            At Kommmb Innovations, each item in our {group.name.toLowerCase()} collection is crafted using only the best of the best materials. Our Pillow line is made of 100% recycled or organic fabrics—no waste, no shortcuts, just eco-friendly comfort. Every piece is handmade with care, ensuring quality and sustainability in every stitch.
           </p>
           <p className="text-gray-600">
-            But our impact goes beyond comfort. With our tree-free and algae-based inks, we're not just making furniture—we're making a statement. It's thoughtfully designed, sustainably sourced, and built to last. From pillows to foot rests, we've perfected the balance of elegance and environmental responsibility.
+            But our impact goes beyond comfort. With our tree-free and algae-based inks, we're not just making pillows—we're making a statement. It's thoughtfully designed, sustainably sourced, and built to last. From throw pillows to nursing pillows, we've perfected the balance of elegance and environmental responsibility.
           </p>
         </div>
       </section>
@@ -121,17 +149,7 @@ export default function CategoryLanding() {
                   className="group relative h-80 rounded-2xl overflow-hidden"
                 >
                   <img 
-                    src={
-                      sub.slug === 'throw-pillows' 
-                        ? "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=600&h=800&fit=crop"
-                        : sub.slug === 'bedroom-pillows'
-                        ? "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=600&h=800&fit=crop"
-                        : sub.slug === 'foot-rests'
-                        ? "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=600&h=800&fit=crop"
-                        : sub.slug === 'play-toys'
-                        ? "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=600&h=800&fit=crop"
-                        : "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=800&fit=crop"
-                    }
+                    src={subcategoryImages[sub.slug] || throwPillowImg}
                     alt={sub.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
