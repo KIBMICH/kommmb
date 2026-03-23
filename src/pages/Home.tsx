@@ -16,7 +16,7 @@ export default function Home() {
     products.find(p => p.group === 'toys-educational' && p.subcategory === 'play-toys'),
     products.find(p => p.group === 'rugs'),
     products.find(p => p.group === 'footrest'),
-  ].filter(Boolean); // Remove any undefined values
+  ].filter((p): p is NonNullable<typeof p> => p !== undefined); // Remove any undefined values with proper type guard
 
   return (
     <div className="min-h-screen bg-white">
