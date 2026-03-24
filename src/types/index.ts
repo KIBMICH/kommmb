@@ -3,7 +3,7 @@ export interface Product {
   sku: string;
   title: string;
   price: number;
-  group: 'pillow' | 'toys-educational' | 'rugs' | 'oven-gloves' | 'footrest' | 'bedboard';
+  group: 'pillows' | 'bed-headboard' | 'toys-educational' | 'oven-gloves' | 'footrest' | 'rugs-mats';
   subcategory: string;
   shortDescriptor: string;
   materials: string[];

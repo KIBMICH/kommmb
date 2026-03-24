@@ -3,18 +3,20 @@ import { products } from '../data/products';
 import ProductCard from '../components/ProductCard';
 import heroImage from '../assets/images/hero.jfif';
 import pillow1 from '../assets/images/pillow/furn5.jpeg';
-import pillow2 from '../assets/images/pillow/furn6.jpeg';
-import pillow3 from '../assets/images/pillow/furn7.jpeg';
 import toy4 from '../assets/images/toy/toy4.jpeg';
-import toy5 from '../assets/images/toy/toy5.jpeg';
 import rug1 from '../assets/images/rugs/rug1.jpeg';
+import bedboard1 from '../assets/images/bedboard/bedboard1.PNG';
+import glove1 from '../assets/images/ovengloves/glove1.jpeg';
+import foot1 from '../assets/images/footrest/foot1.jpeg';
+import test1 from '../assets/images/test1.PNG';
+import test2 from '../assets/images/test2.PNG';
 
 export default function Home() {
   // Select diverse featured products from different categories
   const featuredProducts = [
-    products.find(p => p.group === 'pillow' && p.subcategory === 'throw-pillows'),
+    products.find(p => p.group === 'pillows' && p.subcategory === 'throw-pillows'),
     products.find(p => p.group === 'toys-educational' && p.subcategory === 'play-toys'),
-    products.find(p => p.group === 'rugs'),
+    products.find(p => p.group === 'rugs-mats' && p.subcategory === 'rugs'),
     products.find(p => p.group === 'footrest'),
   ].filter((p): p is NonNullable<typeof p> => p !== undefined); // Remove any undefined values with proper type guard
 
@@ -78,7 +80,7 @@ export default function Home() {
           {/* Large Collection Cards */}
           <div className="grid md:grid-cols-3 gap-6 mb-6">
             <Link 
-              to="/category/pillow"
+              to="/category/pillows"
               className="group relative h-80 rounded-2xl overflow-hidden"
             >
               <img 
@@ -88,7 +90,7 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-8">
                 <h3 className="text-3xl font-heading font-bold text-white mb-2">
-                  Pillow Collection
+                  Pillows
                 </h3>
                 <p className="text-white/90 mb-4">
                   Comfortable pillows made from recycled and organic materials
@@ -113,7 +115,7 @@ export default function Home() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-8">
                 <h3 className="text-3xl font-heading font-bold text-white mb-2">
-                  Toys & Educational
+                  Toys and Educational Materials
                 </h3>
                 <p className="text-white/90 mb-4">
                   Safe, sustainable toys and learning materials for children
@@ -128,20 +130,20 @@ export default function Home() {
             </Link>
 
             <Link 
-              to="/category/rugs"
+              to="/category/rugs-mats"
               className="group relative h-80 rounded-2xl overflow-hidden"
             >
               <img 
                 src={rug1}
-                alt="Rugs Collection"
+                alt="Rugs and Mats Collection"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-8">
                 <h3 className="text-3xl font-heading font-bold text-white mb-2">
-                  Rugs Collection
+                  Rugs and Mats
                 </h3>
                 <p className="text-white/90 mb-4">
-                  Handcrafted rugs made from recycled and sustainable materials
+                  Handcrafted rugs and mats made from recycled and sustainable materials
                 </p>
                 <span className="text-white font-semibold inline-flex items-center">
                   Explore Collection
@@ -156,35 +158,35 @@ export default function Home() {
           {/* Small Category Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             <Link 
-              to="/category/pillow/throw-pillows"
+              to="/category/bed-headboard"
               className="group relative h-48 rounded-xl overflow-hidden"
             >
               <img 
-                src={pillow2}
-                alt="Throw Pillows"
+                src={bedboard1}
+                alt="Bed Headboard Cover and Mattress"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                 <div className="text-center text-white">
-                  <h4 className="text-xl font-semibold mb-1">Throw Pillows</h4>
-                  <p className="text-sm text-white/90">Decorative comfort</p>
+                  <h4 className="text-xl font-semibold mb-1">Bed Headboard Cover and Mattress</h4>
+                  <p className="text-sm text-white/90">Stylish bedroom essentials</p>
                 </div>
               </div>
             </Link>
 
             <Link 
-              to="/category/toys-educational/play-toys"
+              to="/category/oven-gloves"
               className="group relative h-48 rounded-xl overflow-hidden"
             >
               <img 
-                src={toy5}
-                alt="Play Toys"
+                src={glove1}
+                alt="Oven Gloves"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                 <div className="text-center text-white">
-                  <h4 className="text-xl font-semibold mb-1">Play Toys</h4>
-                  <p className="text-sm text-white/90">Imaginative fun</p>
+                  <h4 className="text-xl font-semibold mb-1">Oven Gloves</h4>
+                  <p className="text-sm text-white/90">Heat-resistant protection</p>
                 </div>
               </div>
             </Link>
@@ -194,13 +196,13 @@ export default function Home() {
               className="group relative h-48 rounded-xl overflow-hidden"
             >
               <img 
-                src={pillow3}
-                alt="Footrest"
+                src={foot1}
+                alt="Foot Rest"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                 <div className="text-center text-white">
-                  <h4 className="text-xl font-semibold mb-1">Footrest</h4>
+                  <h4 className="text-xl font-semibold mb-1">Foot Rest</h4>
                   <p className="text-sm text-white/90">Ergonomic support</p>
                 </div>
               </div>
@@ -214,7 +216,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center mb-12">
             <h2 className="text-3xl font-heading font-bold text-gray-900">
-              Featured Innovations
+              Featured Products
             </h2>
             <Link to="/products" className="text-leaf-green font-semibold hover:underline">
               View All →
@@ -338,6 +340,81 @@ export default function Home() {
                 className="rounded-2xl shadow-xl"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Customer Reviews */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold text-gray-900 mb-4">
+              What Our Customers Say
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Hear from our satisfied customers who have embraced sustainable living with our eco-friendly products.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Review 1 */}
+            <div className="bg-gray-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition">
+              <div className="flex items-center mb-6">
+                <img 
+                  src={test1}
+                  alt="Customer testimonial"
+                  className="w-16 h-16 rounded-full object-cover mr-4"
+                />
+                <div>
+                  <h4 className="font-semibold text-gray-900">Chioma Okafor</h4>
+                  <div className="flex text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                      </svg>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <p className="text-gray-700 italic mb-4">
+                "I absolutely love my throw pillows from Kommmb! They're not only beautiful and comfortable, but knowing they're made from recycled materials makes me feel good about my purchase. The quality is outstanding and they've held up perfectly."
+              </p>
+              <p className="text-sm text-gray-500">Verified Purchase - Throw Pillows</p>
+            </div>
+
+            {/* Review 2 */}
+            <div className="bg-gray-50 rounded-2xl p-8 shadow-sm hover:shadow-md transition">
+              <div className="flex items-center mb-6">
+                <img 
+                  src={test2}
+                  alt="Customer testimonial"
+                  className="w-16 h-16 rounded-full object-cover mr-4"
+                />
+                <div>
+                  <h4 className="font-semibold text-gray-900">Amara Nwosu</h4>
+                  <div className="flex text-yellow-400">
+                    {[...Array(5)].map((_, i) => (
+                      <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 20 20">
+                        <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                      </svg>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <p className="text-gray-700 italic mb-4">
+                "The educational toys I bought for my kids are fantastic! They're safe, durable, and the kids love playing with them. It's wonderful to support a company that cares about sustainability and quality. Highly recommend!"
+              </p>
+              <p className="text-sm text-gray-500">Verified Purchase - Educational Toys</p>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <Link
+              to="/products"
+              className="inline-block bg-leaf-green text-white px-8 py-3 rounded-lg font-semibold hover:bg-leaf-green-dark transition"
+            >
+              Shop Our Collection
+            </Link>
           </div>
         </div>
       </section>

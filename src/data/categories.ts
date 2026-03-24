@@ -2,9 +2,9 @@ import type { CategoryGroup } from '../types';
 
 export const categoryGroups: CategoryGroup[] = [
   {
-    id: 'pillow',
-    name: 'Pillow',
-    slug: 'pillow',
+    id: 'pillows',
+    name: 'Pillows',
+    slug: 'pillows',
     description: 'Comfortable, eco-friendly pillows made from recycled materials',
     subcategories: [
       {
@@ -40,8 +40,28 @@ export const categoryGroups: CategoryGroup[] = [
     ]
   },
   {
+    id: 'bed-headboard',
+    name: 'Bed Headboard Cover and Mattress',
+    slug: 'bed-headboard',
+    description: 'Stylish bed headboards and mattresses crafted from sustainable materials',
+    subcategories: [
+      {
+        id: 'headboards',
+        name: 'Headboards',
+        slug: 'headboards',
+        description: 'Beautiful headboards for your bedroom'
+      },
+      {
+        id: 'mattress',
+        name: 'Mattress',
+        slug: 'mattress',
+        description: 'Comfortable and sustainable mattresses'
+      }
+    ]
+  },
+  {
     id: 'toys-educational',
-    name: 'Toys & Educational Materials',
+    name: 'Toys and Educational Materials',
     slug: 'toys-educational',
     description: 'Safe, sustainable toys and learning materials for children',
     subcategories: [
@@ -56,20 +76,6 @@ export const categoryGroups: CategoryGroup[] = [
         name: 'Educational Materials',
         slug: 'educational-materials',
         description: 'Learning kits and manipulatives for development'
-      }
-    ]
-  },
-  {
-    id: 'rugs',
-    name: 'Rugs',
-    slug: 'rugs',
-    description: 'Handcrafted rugs made from recycled and sustainable materials',
-    subcategories: [
-      {
-        id: 'floor-rugs',
-        name: 'Floor Rugs',
-        slug: 'floor-rugs',
-        description: 'Durable and beautiful floor rugs for any space'
       }
     ]
   },
@@ -89,7 +95,7 @@ export const categoryGroups: CategoryGroup[] = [
   },
   {
     id: 'footrest',
-    name: 'Footrest',
+    name: 'Foot Rest',
     slug: 'footrest',
     description: 'Ergonomic footrests for comfort and support',
     subcategories: [
@@ -102,16 +108,22 @@ export const categoryGroups: CategoryGroup[] = [
     ]
   },
   {
-    id: 'bedboard',
-    name: 'Bedboard',
-    slug: 'bedboard',
-    description: 'Stylish bedboards crafted from sustainable materials',
+    id: 'rugs-mats',
+    name: 'Rugs and Mats',
+    slug: 'rugs-mats',
+    description: 'Handcrafted rugs and mats made from recycled and sustainable materials',
     subcategories: [
       {
-        id: 'headboards',
-        name: 'Headboards',
-        slug: 'headboards',
-        description: 'Beautiful headboards for your bedroom'
+        id: 'rugs',
+        name: 'Rugs',
+        slug: 'rugs',
+        description: 'Durable and beautiful floor rugs for any space'
+      },
+      {
+        id: 'mats',
+        name: 'Mats',
+        slug: 'mats',
+        description: 'Versatile mats for various uses'
       }
     ]
   }

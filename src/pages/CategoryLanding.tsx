@@ -12,9 +12,13 @@ import customizedPillowImg from '../assets/images/pillow/customizedpillow/cus1.j
 import playToysImg from '../assets/images/toy/toy1.jpeg';
 import educationalImg from '../assets/images/toy/toy3.jpeg';
 import rugImg from '../assets/images/rugs/rug1.jpeg';
+import matImg from '../assets/images/rugs/mat1.jpeg';
 import ovenGlovesImg from '../assets/images/ovengloves/glove1.jpeg';
 import footrestImg from '../assets/images/footrest/foot1.jpeg';
 import bedboardImg from '../assets/images/bedboard/bedboard1.PNG';
+
+// Placeholder for mattress
+const mattressPlaceholder = 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600&h=800&fit=crop';
 
 // Subcategory image mapping
 const subcategoryImages: Record<string, string> = {
@@ -25,10 +29,12 @@ const subcategoryImages: Record<string, string> = {
   'customized-pillows': customizedPillowImg,
   'play-toys': playToysImg,
   'educational-materials': educationalImg,
-  'floor-rugs': rugImg,
+  'rugs': rugImg,
+  'mats': matImg,
   'kitchen-gloves': ovenGlovesImg,
   'ergonomic-footrest': footrestImg,
   'headboards': bedboardImg,
+  'mattress': mattressPlaceholder,
 };
 
 export default function CategoryLanding() {
@@ -59,7 +65,7 @@ export default function CategoryLanding() {
     return p.group === groupSlug;
   });
 
-  const isPillow = groupSlug === 'pillow';
+  const isPillow = groupSlug === 'pillows';
 
   return (
     <div className="min-h-screen bg-white">
